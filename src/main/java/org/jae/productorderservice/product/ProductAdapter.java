@@ -1,5 +1,8 @@
 package org.jae.productorderservice.product;
 
+import org.springframework.stereotype.Service;
+
+@Service
 class ProductAdapter implements ProductPort {
 
     private final ProductRepository productRepository;

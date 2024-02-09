@@ -22,4 +22,12 @@ public class ProductSteps {
         final int price = 1000;
         return new AddProductRequest(name, price, DiscountPolicy.NONE);
     }
+
+    public static ExtractableResponse<Response> 상품조회요청(final Long productId) {
+        return RestAssured.given().log().all()
+                .when()
+                .get("/products/{productId}", productId)
+                .then().log().all()
+                .extract();
+    }
 }

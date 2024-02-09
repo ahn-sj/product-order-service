@@ -21,7 +21,7 @@ public class ProductServiceTest {
         final Long productId = 1L;
 
         // when:
-        final UpdateProductRequest request = new UpdateProductRequest("상품 수정", 2000, DiscountPolicy.NONE);
+        final UpdateProductRequest request = ProductSteps.상품수정요청_생성();
         productService.updateProduct(productId, request);
 
         // then:
@@ -30,5 +30,7 @@ public class ProductServiceTest {
         Assertions.assertThat(productResponse.name()).isEqualTo("상품 수정");
         Assertions.assertThat(productResponse.price()).isEqualTo(2000);
     }
+
+
 
 }

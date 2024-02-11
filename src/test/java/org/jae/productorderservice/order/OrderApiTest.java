@@ -1,28 +1,31 @@
 package org.jae.productorderservice.order;
 
-import org.jae.productorderservice.product.ProductService;
+import io.restassured.RestAssured;
+import io.restassured.response.ExtractableResponse;
+import io.restassured.response.Response;
+import org.assertj.core.api.Assertions;
+import org.jae.productorderservice.ApiTest;
 import org.jae.productorderservice.product.ProductSteps;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 
-@ActiveProfiles("test")
-@SpringBootTest
-public class OrderServiceTest {
-
-    @Autowired
-    private OrderService orderService;
-
-    @Autowired
-    private ProductService productService;
+public class OrderApiTest extends ApiTest {
 
     @Test
     void 상품_주문() {
-        productService.addProduct(ProductSteps.상품등록요청_생성());
+        ProductSteps.상품등록요청(ProductSteps.상품등록요청_생성());
         final CreateOrderRequest request = 생성주문요청_생성();
 
-        orderService.createOrder(request);
+        final ExtractableResponse<Response> response = RestAssured.given().log().all()
+                .contentType(MediaType.APPLICATION_JSON_VALUE)
+                .body(request)
+                .when()
+                .post("/orders")
+                .then()
+                .log().all().extract();
+
+        Assertions.assertThat(response.statusCode()).isEqualTo(HttpStatus.CREATED.value());
     }
 
     private static CreateOrderRequest 생성주문요청_생성() {

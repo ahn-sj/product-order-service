@@ -44,7 +44,6 @@ public class ProductApiTest extends ApiTest {
     }
 
     @Test
-    @DisplayName("상품 수정")
     void 상품_수정() {
 
         ProductSteps.상품등록요청(ProductSteps.상품등록요청_생성());

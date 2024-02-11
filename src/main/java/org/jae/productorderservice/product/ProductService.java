@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-class ProductService {
+public class ProductService {
 
     private final ProductPort productPort;
 

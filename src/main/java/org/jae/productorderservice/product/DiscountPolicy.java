@@ -1,6 +1,6 @@
 package org.jae.productorderservice.product;
 
-enum DiscountPolicy {
+public enum DiscountPolicy {
     NONE;
 
 }

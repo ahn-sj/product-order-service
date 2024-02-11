@@ -1,9 +1,11 @@
-package org.jae.productorderservice.product;
+package org.jae.productorderservice.product.adapter;
 
+import org.jae.productorderservice.product.application.port.ProductPort;
+import org.jae.productorderservice.product.domain.Product;
 import org.springframework.stereotype.Service;
 
 @Service
-class ProductAdapter implements ProductPort {
+public class ProductAdapter implements ProductPort {
 
     private final ProductRepository productRepository;
 

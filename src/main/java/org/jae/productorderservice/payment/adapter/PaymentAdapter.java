@@ -1,8 +1,10 @@
-package org.jae.productorderservice.payment;
+package org.jae.productorderservice.payment.adapter;
 
-import org.jae.productorderservice.order.Order;
-import org.jae.productorderservice.product.DiscountPolicy;
-import org.jae.productorderservice.product.Product;
+import org.jae.productorderservice.order.domain.Order;
+import org.jae.productorderservice.payment.domain.Payment;
+import org.jae.productorderservice.payment.application.port.PaymentPort;
+import org.jae.productorderservice.product.domain.DiscountPolicy;
+import org.jae.productorderservice.product.domain.Product;
 
 public class PaymentAdapter implements PaymentPort {
 

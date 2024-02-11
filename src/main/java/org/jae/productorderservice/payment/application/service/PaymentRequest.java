@@ -1,4 +1,4 @@
-package org.jae.productorderservice.payment;
+package org.jae.productorderservice.payment.application.service;
 
 public record PaymentRequest(Long orderId, String cardNumber) {
 }

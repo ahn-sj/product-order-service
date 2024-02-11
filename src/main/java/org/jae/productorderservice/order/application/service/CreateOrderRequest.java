@@ -1,4 +1,4 @@
-package org.jae.productorderservice.order;
+package org.jae.productorderservice.order.application.service;
 
 import org.springframework.util.Assert;
 

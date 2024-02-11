@@ -1,8 +1,9 @@
-package org.jae.productorderservice.product;
+package org.jae.productorderservice.product.application.service;
 
+import org.jae.productorderservice.product.domain.DiscountPolicy;
 import org.springframework.util.Assert;
 
-record GetProductResponse(
+public record GetProductResponse(
         long id,
         String name,
         int price,

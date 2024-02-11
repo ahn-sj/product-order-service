@@ -1,10 +1,10 @@
-package org.jae.productorderservice.order;
+package org.jae.productorderservice.order.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.jae.productorderservice.product.Product;
+import org.jae.productorderservice.product.domain.Product;
 import org.springframework.util.Assert;
 
 @Entity

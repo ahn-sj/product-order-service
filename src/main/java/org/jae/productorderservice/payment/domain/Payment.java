@@ -1,6 +1,6 @@
-package org.jae.productorderservice.payment;
+package org.jae.productorderservice.payment.domain;
 
-import org.jae.productorderservice.order.Order;
+import org.jae.productorderservice.order.domain.Order;
 
 public class Payment {
     private Order order;

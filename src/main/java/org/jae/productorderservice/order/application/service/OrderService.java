@@ -1,6 +1,8 @@
-package org.jae.productorderservice.order;
+package org.jae.productorderservice.order.application.service;
 
-import org.jae.productorderservice.product.Product;
+import org.jae.productorderservice.order.application.port.OrderPort;
+import org.jae.productorderservice.order.domain.Order;
+import org.jae.productorderservice.product.domain.Product;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -10,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Component
 @RestController
-class OrderService {
+public class OrderService {
 
     private final OrderPort orderPort;
 

@@ -1,4 +1,4 @@
-package org.jae.productorderservice.product;
+package org.jae.productorderservice.product.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;

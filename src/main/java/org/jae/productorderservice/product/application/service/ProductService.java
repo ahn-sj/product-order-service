@@ -1,5 +1,7 @@
-package org.jae.productorderservice.product;
+package org.jae.productorderservice.product.application.service;
 
+import org.jae.productorderservice.product.application.port.ProductPort;
+import org.jae.productorderservice.product.domain.Product;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;

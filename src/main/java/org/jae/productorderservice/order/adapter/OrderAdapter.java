@@ -1,11 +1,13 @@
-package org.jae.productorderservice.order;
+package org.jae.productorderservice.order.adapter;
 
-import org.jae.productorderservice.product.Product;
-import org.jae.productorderservice.product.ProductRepository;
+import org.jae.productorderservice.order.application.port.OrderPort;
+import org.jae.productorderservice.order.domain.Order;
+import org.jae.productorderservice.product.domain.Product;
+import org.jae.productorderservice.product.adapter.ProductRepository;
 import org.springframework.stereotype.Component;
 
 @Component
-class OrderAdapter implements OrderPort {
+public class OrderAdapter implements OrderPort {
 
     private final ProductRepository productRepository;
     private final OrderRepository orderRepository;
